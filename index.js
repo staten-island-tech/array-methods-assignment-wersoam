@@ -35,6 +35,14 @@ const handtraps = [
   { name: "kuriboh", category: ["dmgnegate", "fiend", "dark", "discard"] },
 ];
 
-handtraps.forEach((interuptions) => {
-  console.log(interuptions);
-});
+{
+  handtraps.forEach((interuptions) => {
+    console.log(interuptions);
+  });
+}
+
+const type = handtraps.foreach(
+  includes((handtraps) => handtraps.category === "spellcaster")
+);
+
+console.log(type);
