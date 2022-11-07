@@ -2,11 +2,13 @@ const handtraps = [
   {
     name: "ash blossom and joyous spring",
     category: ["zombie", "discard", "fire", "drawnegate"],
+    special: "tuner",
   },
   { name: "maxx c", category: ["insect", "earth", "discard", "cardadvantage"] },
   {
     name: "ghost ogre and snow rabbit",
     category: ["psychic", "discard", "light", "destroy"],
+    special: "tuner",
   },
   {
     name: "droll and lock bird",
@@ -23,6 +25,7 @@ const handtraps = [
   {
     name: "effect veiler",
     category: ["monsnegate", "discard", "light", "spellcaster"],
+    special: "tuner",
   },
   {
     name: "dimension shifter",
@@ -41,8 +44,7 @@ const handtraps = [
   });
 }
 
-const type = handtraps.foreach(
-  includes((handtraps) => handtraps.category === "spellcaster")
-);
-
+const type = handtraps.filter((handtrap) => {
+  handtrap.includes("tuner");
+});
 console.log(type);
